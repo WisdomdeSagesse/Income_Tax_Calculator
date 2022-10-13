@@ -19,9 +19,10 @@
         
         if (income > 100000 && income <= 125140)
         {
-            personalAllowance = ((personalAllowance - (income - personalAllowanceIncomeTreshold) / 2) * 1);
+            decimal allowanceReducationRate = 2;
+            personalAllowance = ((personalAllowance - (income - personalAllowanceIncomeTreshold) / allowanceReducationRate));
         }
-        else
+        else if (income > 125140)
         {
             personalAllowance = 0;
         }
